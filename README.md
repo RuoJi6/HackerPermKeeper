@@ -8,11 +8,12 @@
     <a href="https://taoyuan.cool/">
       <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-taoyuan.cool-blue" />
     </a>
-    <a href="[#](https://taoyuan.cool/)">
+    <a href="https://taoyuan.cool/">
       <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E5%BC%B1%E9%B8%A1-red" />
     </a>
     <img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-black">
     <img src="https://badgen.net/github/stars/ytMuCheng/HackerPermKeeper/?icon=github&color=black">
+    <img src="https://badgen.net/github/issues/ytMuCheng/HackerPermKeeper">
     <img src="https://img.shields.io/badge/python%E7%89%88%E6%9C%AC-3_and_2-green">
 </p>
 
@@ -74,10 +75,6 @@ python main.py -m 1   #选择模块
 生成的文件会在payloads目录下产生
 ```
 ![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/9c145fa7-01a9-45e6-bde3-1ecb973f16e7)
-
-
-
-
 
 
 
@@ -147,10 +144,14 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 ||        越少，越难发现，但是部署起来，需要的依赖很多
 
 ```
-
-
-
-
+<br/><br/>
+## :triangular_flag_on_post:	提交问题
+有问题请提交issues<br/>
+<a href="https://github.com/ytMuCheng/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/ytMuCheng/HackerPermKeeper"></a>
+<br/>
+加我微信进开发者微信群聊 
+<br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
+<br/><br/>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/ytMuCheng/HackerPermKeeper.svg)](https://starchart.cc/ytMuCheng/HackerPermKeeper) 
 
@@ -163,3 +164,4 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 <a href="https://github.com/ytMuCheng/HackerPermKeeper/">
   <img height=150 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=ytMuCheng&layout=compact&langs_count=8&card_width=320" />
 </a>
+
