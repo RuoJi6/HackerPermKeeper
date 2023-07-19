@@ -1,4 +1,4 @@
-# :lock:	HackerPermKeeper  
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/7d027b6a-2989-44d7-b110-14e59d5869e9)# :lock:	HackerPermKeeper  
 ### 黑客权限保持者
 <br/><br/>
   <p align="center">
@@ -145,13 +145,20 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 
 ```
 <br/><br/>
-## :triangular_flag_on_post:	提交问题
+## :zap:	提交问题
 有问题请提交issues<br/>
 <a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
 <br/>
 加我微信进开发者微信群聊 
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
 <br/><br/>
+
+## :world_map: 版本更新
+```
+1.0 权限维持
+2.0 1、利用成功之后删除文件
+    2、用户可以自定义用户名以及密码，还有就是存储密码路径，以及sh脚本路径
+```
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
