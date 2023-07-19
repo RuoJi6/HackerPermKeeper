@@ -12,8 +12,8 @@
       <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E5%BC%B1%E9%B8%A1-red" />
     </a>
     <img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-black">
-    <img src="https://badgen.net/github/stars/ytMuCheng/HackerPermKeeper/?icon=github&color=black">
-    <img src="https://badgen.net/github/issues/ytMuCheng/HackerPermKeeper">
+    <img src="https://badgen.net/github/stars/RuoJi6/HackerPermKeeper/?icon=github&color=black">
+    <img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper">
     <img src="https://img.shields.io/badge/python%E7%89%88%E6%9C%AC-3_and_2-green">
 </p>
 
@@ -38,43 +38,43 @@
 
 
 ## :rocket:快速使用
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6b71f9b8-cbb4-42e3-8d1d-3a30e37163b8)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6b71f9b8-cbb4-42e3-8d1d-3a30e37163b8)
 
 ```
 python3运行安全此项目，但是运行权限维持模块脚本请看上面的表格
 安装依赖
 pip install -r requirements.txt
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/1d4af51c-dfbe-484e-b70f-009214a4635c)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/1d4af51c-dfbe-484e-b70f-009214a4635c)
 
 ```
 快速判断目标机器适合的权限维持模块，运行 /check/ 目录下的check.py文件[这个不需要任何依赖环境，python3和python2都支持]
 python check.py
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/db6bb1ad-4b7d-44d8-b0bd-bd1cca3e56a7)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/db6bb1ad-4b7d-44d8-b0bd-bd1cca3e56a7)
 
 ```
 查看权限维持模块信息
 python main.py -c 1
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6eb5f2c6-9870-4988-a2a8-67a8df71c0e2)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6eb5f2c6-9870-4988-a2a8-67a8df71c0e2)
 ```
 查看权限维持模详细块信息
 python main.py -c 2
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/5937624c-b75b-4b51-a197-118b5a14f393)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/5937624c-b75b-4b51-a197-118b5a14f393)
 
 ```
 使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
 python main.py -m 1   #选择模块
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6a816d82-201d-449d-b731-c0bd0d61232f)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6a816d82-201d-449d-b731-c0bd0d61232f)
 ```
 有的生成的脚本文件。需要在生成之后进行手动修改
 比如：修改反弹shellip以及端口，后门用户密码，ssh密钥密码，ssh密钥等[此缺陷将会在第二个版本修复]
 生成的文件会在payloads目录下产生
 ```
-![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/9c145fa7-01a9-45e6-bde3-1ecb973f16e7)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/9c145fa7-01a9-45e6-bde3-1ecb973f16e7)
 
 使用视频：https://www.bilibili.com/video/BV1fV411N7Qc/
 
@@ -147,7 +147,7 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 <br/><br/>
 ## :triangular_flag_on_post:	提交问题
 有问题请提交issues<br/>
-<a href="https://github.com/ytMuCheng/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/ytMuCheng/HackerPermKeeper"></a>
+<a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
 <br/>
 加我微信进开发者微信群聊 
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
@@ -158,10 +158,10 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 
 
 
-<a href="https://github.com/ytMuCheng">
+<a href="https://github.com/RuoJi6">
   <img height=150 align="center" src="https://github-readme-stats.vercel.app/api?username=RuoJi6"/>
 </a>
-<a href="https://github.com/ytMuCheng/HackerPermKeeper/">
+<a href="https://github.com/RuoJi6/HackerPermKeeper/">
   <img height=150 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=RuoJi6&layout=compact&langs_count=8&card_width=320" />
 </a>
 
