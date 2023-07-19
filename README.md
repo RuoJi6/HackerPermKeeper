@@ -18,7 +18,9 @@
 
 ## 🚀 快速使用
 
-<br/><br/>
+
+
+
 # 常见后门介绍
 <img width="600" alt="d9f6b995abae8d28bdb35a998a1ec3f" src="https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/751f0c6c-e995-47ad-b115-eaaa103754d9">
 
@@ -26,4 +28,12 @@
 
 ## Stargazers over time [![Stargazers over time](https://starchart.cc/ytMuCheng/HackerPermKeeper.svg)](https://starchart.cc/ytMuCheng/HackerPermKeeper) 
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=ytMuCheng)](https://github.com/anuraghazra/github-readme-stats)
+
+
+
+<a href="https://github.com/ytMuCheng">
+  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api?username=ytMuCheng"/>
+</a>
+<a href="https://github.com/ytMuCheng/HackerPermKeeper/">
+  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=ytMuCheng&layout=compact&langs_count=8&card_width=320" />
+</a>
