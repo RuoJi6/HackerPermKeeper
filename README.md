@@ -153,7 +153,7 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
 <br/><br/>
 
-## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/ytMuCheng/HackerPermKeeper.svg)](https://starchart.cc/ytMuCheng/HackerPermKeeper) 
+## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
 
 
