@@ -159,9 +159,9 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 
 
 <a href="https://github.com/ytMuCheng">
-  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api?username=ytMuCheng"/>
+  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api?username=RuoJi6"/>
 </a>
 <a href="https://github.com/ytMuCheng/HackerPermKeeper/">
-  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=ytMuCheng&layout=compact&langs_count=8&card_width=320" />
+  <img height=150 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=RuoJi6&layout=compact&langs_count=8&card_width=320" />
 </a>
 
