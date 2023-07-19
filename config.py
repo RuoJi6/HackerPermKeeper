@@ -9,7 +9,7 @@ init()
 
 
 def configs():
-    print(colored('HackerPermKeeper v1.0 by 弱鸡 支持以下漏洞检测 https://github.com/ytMuCheng/HackerPermKeeper/', 'green'))
+    print(colored('HackerPermKeeper v1.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper/', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print('OpenSSH后门  优点：直接重置目标服务器的OpenSSH，在里面写入万能密码以及记录ssh明文账户代码 ''  缺点：需要依大量的依赖环境，而且只能使用低版本系统，目前经过测试的有乌班图14',colored('[建议指数：*]\n', 'red'))
 
@@ -36,7 +36,7 @@ def configs():
     print('项目地址：https://github.com/f0rb1dd3n/Reptile/')
 
 def configss():
-    print(colored('HackerPermKeeper v1.0 by 弱鸡 支持以下漏洞检测 https://github.com/ytMuCheng/HackerPermKeeper/', 'green'))
+    print(colored('HackerPermKeeper v1.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper/', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'),colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'),colored('[利用]', 'red'))
