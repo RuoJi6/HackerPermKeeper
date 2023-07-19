@@ -1,4 +1,4 @@
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/7d027b6a-2989-44d7-b110-14e59d5869e9)# :lock:	HackerPermKeeper  
+# :lock:	HackerPermKeeper  
 ### 黑客权限保持者
 <br/><br/>
   <p align="center">
