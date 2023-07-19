@@ -16,7 +16,7 @@ init()
 
 
 try:
-    name = colored('HackerPermKeeper v1.0 by 弱鸡 https://github.com/ytMuCheng/HackerPermKeeper/', 'green')
+    name = colored('HackerPermKeeper v1.0 by 弱鸡 https://github.com/RuoJi6/HackerPermKeeper', 'green')
     arg = ArgumentParser(description=name )  # 创建解析器, description内容就是
     arg.add_argument("-m", "--multiple", help="选择权限维持模块 -m 1")
     arg.add_argument("-c", "--config", help="查看支持的权限维持模块 -c 1,查看详细使用说明 -c 2 ")
