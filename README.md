@@ -64,9 +64,16 @@ python main.py -c 2
 ![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/5937624c-b75b-4b51-a197-118b5a14f393)
 
 ```
-使用此项目生成模块[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
+使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
+python main.py -m 1   #选择模块
 ```
-
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6a816d82-201d-449d-b731-c0bd0d61232f)
+```
+有的生成的脚本文件。需要在生成之后进行手动修改
+比如：修改反弹shellip以及端口，后门用户密码，ssh密钥密码，ssh密钥等[此缺陷将会在第二个版本修复]
+生成的文件会在payloads目录下产生
+```
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/9c145fa7-01a9-45e6-bde3-1ecb973f16e7)
 
 
 
