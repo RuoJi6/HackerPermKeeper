@@ -35,9 +35,15 @@
 | Rootkit后门                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     |
 
 ## :rocket:快速使用
+```
+安装依赖
+pip install -r requirements.txt
+```
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/1d4af51c-dfbe-484e-b70f-009214a4635c)
 
-
-
+```
+快速判断目标机器适合的权限维持模块
+```
 
 ## :triangular_flag_on_post:	常见后门介绍
 ```
