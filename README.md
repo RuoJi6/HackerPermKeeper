@@ -13,37 +13,67 @@
     </a>
     <img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-black">
     <img src="https://badgen.net/github/stars/ytMuCheng/HackerPermKeeper/?icon=github&color=black">
+    <img src="https://img.shields.io/badge/python%E7%89%88%E6%9C%AC-3_and_2-green">
 </p>
 
 
 
 
 通过渗透拿到权限之后，为了不让权限丢失，都会进行权限维持，而在进行权限维持的时候，红队需要花费大量的时候，来验证是否合适，因此在这款工具就诞生 HackerPermKeeper[黑客权限保持者] 
+<br/>
+查看下面的表格可以知道生成的权限维持文件可以运行的python版本，但是这个项目本身是python3运行的
 
+| :lock:权限维持模块                 | centos | Ubuntu | 推荐指数 | 备注                                                         | py2 | py3 |
+| :--------------------------- | ------ | ------ | -------- | ------------------------------------------------------------ | ---------------------------- | ---------------------------- |
+| OpenSSH后门万能密码&记录密码 |   :x:      |:heavy_check_mark:	    |:star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x: | :heavy_check_mark: |
+| PAM后门                      | :x:     | :x:     | :star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x: | :x: |
+| SSH软链接                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	       | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
+| ssh公私密钥                  | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	:star:	:star:	    | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
+| 后门帐号                     | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	      | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
+| crontab计划任务              | :heavy_check_mark:	   | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
+| Strace后门                   |:heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	       | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
+| Alias后门                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
+| Rootkit后门                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     | :x: | :x: |
 
-
-| :lock:权限维持模块                 | centos | Ubuntu | 推荐指数 | 备注                                                         |
-| :--------------------------- | ------ | ------ | -------- | ------------------------------------------------------------ |
-| OpenSSH后门万能密码&记录密码 |   :x:      |:heavy_check_mark:	    |:star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               |
-| PAM后门                      | :x:     | :x:     | :star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               |
-| SSH软链接                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	       | 容易被发现                                                   |
-| ssh公私密钥                  | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	:star:	:star:	    | 发现程度很难，参考了挖矿病毒                                 |
-| 后门帐号                     | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	      | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] |
-| crontab计划任务              | :heavy_check_mark:	   | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 难以发现，通过执行计划任务                                   |
-| Strace后门                   |:heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	       | 键盘记录的后门                                               |
-| Alias后门                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 别名后门，难以发现，但是需要用户去执行命令                   |
-| Rootkit后门                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     |
 
 ## :rocket:快速使用
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6b71f9b8-cbb4-42e3-8d1d-3a30e37163b8)
+
 ```
+python3运行安全此项目，但是运行权限维持模块脚本请看上面的表格
 安装依赖
 pip install -r requirements.txt
 ```
 ![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/1d4af51c-dfbe-484e-b70f-009214a4635c)
 
 ```
-快速判断目标机器适合的权限维持模块
+快速判断目标机器适合的权限维持模块，运行 /check/ 目录下的check.py文件[这个不需要任何依赖环境，python3和python2都支持]
+python check.py
 ```
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/db6bb1ad-4b7d-44d8-b0bd-bd1cca3e56a7)
+
+```
+查看权限维持模块信息
+python main.py -c 1
+```
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/6eb5f2c6-9870-4988-a2a8-67a8df71c0e2)
+```
+查看权限维持模详细块信息
+python main.py -c 2
+```
+![image](https://github.com/ytMuCheng/HackerPermKeeper/assets/79234113/5937624c-b75b-4b51-a197-118b5a14f393)
+
+```
+使用此项目生成模块[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
+```
+
+
+
+
+
+
+
+
 
 ## :triangular_flag_on_post:	常见后门介绍
 ```
