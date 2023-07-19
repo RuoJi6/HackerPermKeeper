@@ -1,5 +1,6 @@
-# HackerPermKeeper  
-黑客权限保持者<br/><br/>
+# :lock:	HackerPermKeeper  
+### 黑客权限保持者
+<br/><br/>
   <p align="center">
     <a href="https://www.one-fox.cn/">
       <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F-One--fox-pink" />
@@ -21,7 +22,7 @@
 
 
 
-| 权限维持模块                 | centos | Ubuntu | 推荐指数 | 备注                                                         |
+| :lock:权限维持模块                 | centos | Ubuntu | 推荐指数 | 备注                                                         |
 | :--------------------------- | ------ | ------ | -------- | ------------------------------------------------------------ |
 | OpenSSH后门万能密码&记录密码 |   :x:      |:heavy_check_mark:	    |:star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               |
 | PAM后门                      | :x:     | :x:     | :star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               |
@@ -33,12 +34,12 @@
 | Alias后门                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 别名后门，难以发现，但是需要用户去执行命令                   |
 | Rootkit后门                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     |
 
-## 🚀 快速使用
+## :rocket:快速使用
 
 
 
 
-# 常见后门介绍
+## :triangular_flag_on_post:	常见后门介绍
 ```
 OpenSSH后门万能密码&记录密码（这个需要依赖环境），就是把对方的门换个锁，但是原来的钥匙也可以使用
 发现程度：||
@@ -108,7 +109,7 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 
 
 
-## Stargazers over time [![Stargazers over time](https://starchart.cc/ytMuCheng/HackerPermKeeper.svg)](https://starchart.cc/ytMuCheng/HackerPermKeeper) 
+## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/ytMuCheng/HackerPermKeeper.svg)](https://starchart.cc/ytMuCheng/HackerPermKeeper) 
 
 
 
