@@ -34,7 +34,7 @@
 | crontab计划任务              | :heavy_check_mark:	   | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
 | Strace后门                   |:heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	       | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
 | Alias后门                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
-| Rootkit后门                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     | :x: | :x: |
+| Rootkit后门[检测]                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     | :x: | :x: |
 
 
 ## :rocket:快速使用
