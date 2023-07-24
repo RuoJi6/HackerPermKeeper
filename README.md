@@ -24,17 +24,19 @@
 <br/>
 查看下面的表格可以知道生成的权限维持文件可以运行的python版本，但是这个项目本身是python3运行的[我自己的环境是Python 3.9.7]
 
-| :lock:权限维持模块                 | centos | Ubuntu | 推荐指数 | 备注                                                         | py2 | py3 |
-| :--------------------------- | ------ | ------ | -------- | ------------------------------------------------------------ | ---------------------------- | ---------------------------- |
-| OpenSSH后门万能密码&记录密码 |   :x:      |:heavy_check_mark:	    |:star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x: | :heavy_check_mark: |
-| PAM后门                      | :x:     | :x:     | :star:	        | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x: | :x: |
-| SSH软链接                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	       | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
-| ssh公私密钥                  | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	:star:	:star:	    | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
-| 后门帐号                     | :heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	:star:	      | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
-| crontab计划任务              | :heavy_check_mark:	   | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
-| Strace后门                   |:heavy_check_mark:	    | :heavy_check_mark:	    | :star:	:star:	       | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
-| Alias后门                    | :heavy_check_mark:	    | :heavy_check_mark:	   | :star:	:star:	:star:	:star:	     | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
-| Rootkit后门[检测]                  | :x:     | :x:    | :star:	:star:	:star:	      | 难以发现，但是安装复杂，而且指定内核版本                     | :x: | :x: |
+| :lock:权限维持模块           | centos             | Ubuntu             | 推荐指数                                         | 备注                                                         | py2                | py3                |
+| :--------------------------- | ------------------ | ------------------ | ------------------------------------------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
+| OpenSSH后门万能密码&记录密码 | :x:                | :heavy_check_mark: | :star:                                           | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :heavy_check_mark: |
+| PAM后门                      | :x:                | :x:                | :star:                                           | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :x:                |
+| SSH软链接                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                 | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
+| ssh公私密钥                  | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:   | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
+| 后门帐号                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:                       | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
+| crontab计划任务              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
+| Strace后门                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                 | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
+| Alias后门                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
+| Rootkit后门[检测]            | :x:                | :x:                | :star:	:star:	:star:                       | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
+| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star: | 快速检测目标机器可以使用那个权限维持模块                     | :heavy_check_mark: | :heavy_check_mark: |
+
 
 
 ## :rocket:快速使用
