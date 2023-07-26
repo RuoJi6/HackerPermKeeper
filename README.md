@@ -169,6 +169,7 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 ```
 
 
+## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
 
 
