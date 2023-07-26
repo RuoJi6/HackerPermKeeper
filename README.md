@@ -168,7 +168,6 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
     8、修复计划任务，在反弹shell的时候，出现的python版本问题
 ```
 
-## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
 
 
