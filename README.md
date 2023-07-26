@@ -159,11 +159,13 @@ Rootkit是一种特殊的恶意软件，它的功能是在安装目标上隐藏�
 ```
 1.0 权限维持
 2.0 1、利用成功之后删除文件
-    2、用户可以自定义用户名以及密码，还有就是存储密码路径，以及sh脚本路径
+    2、命令配合使用
     3、判断当前系统有没有python环境
     4、使用ssh密钥的时候，在对方服务器生成的时候，生成完成之后，删除文件id_ed25519.pub和id_ed25519
-    5、设置全局环境变量不记录空格命令
-    6、命令配合使用
+    5、设置全局环境变量不记录空格命令[history]
+    6、检测.ssh目录下文件
+    7、修改在不同环境下，main.py运行bug
+    8、修复计划任务，在反弹shell的时候，出现的python版本问题
 ```
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
