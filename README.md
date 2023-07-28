@@ -168,28 +168,6 @@ ssh软链接&crontab
 ||        越少，越难发现，但是部署起来，需要的依赖很多
 
 ```
-<br/><br/>
-## :zap:	提交问题
-有问题请提交issues<br/>
-<a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
-<br/>
-加我微信进开发者微信群聊 
-<br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
-<br/><br/>
-
-## :world_map: 版本更新
-```
-1.0 权限维持
-2.0 1、利用成功之后删除文件
-    2、命令配合使用[软链接+计划任务]
-    3、判断当前系统有没有python环境
-    4、使用ssh密钥的时候，在对方服务器生成的时候，生成完成之后，删除文件id_ed25519.pub和id_ed25519
-    5、设置全局环境变量不记录空格命令[history]
-    6、修改在不同环境下，main.py运行bug
-    7、修复计划任务，在反弹shell的时候，出现的python版本问题
-    8、ssh密钥权限维持模块，bug修复，如果是出现不是root，权限也可以成功
-    9、修复check.py脚本检测普通用户权限
-```
 
 ## :warning:错误error
 ```
@@ -209,6 +187,34 @@ ssh软链接&crontab
 解决：修改权限 chmod 600 密钥文件，然后在连接
 ```
 ![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/8d9262ac-1555-466d-8ed7-197fb9521d43)
+
+
+<br/><br/>
+## :zap:提交问题
+有问题请提交issues<br/>
+<a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
+<br/>
+加我微信进开发者微信群聊 
+<br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
+<br/><br/>
+
+## :world_map:版本更新
+```
+1.0 权限维持
+----------------------------------------------------------------------------------------------------------
+2.0 1、利用成功之后删除文件
+    2、命令配合使用[软链接+计划任务]
+    3、判断当前系统有没有python环境
+    4、使用ssh密钥的时候，在对方服务器生成的时候，生成完成之后，删除文件id_ed25519.pub和id_ed25519
+    5、设置全局环境变量不记录空格命令[history]
+    6、修改在不同环境下，main.py运行bug
+    7、修复计划任务，在反弹shell的时候，出现的python版本问题
+    8、ssh密钥权限维持模块，bug修复，如果是出现不是root，权限也可以成功
+    9、修复check.py脚本检测普通用户权限
+----------------------------------------------------------------------------------------------------------
+3.0 1、php web权限维持马[首页马，加密马内存马，不死马]
+    2、模块配合使用[添加用户加计划任务，ssh密钥加计划任务]
+```
 
 
 
