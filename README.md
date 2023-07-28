@@ -46,43 +46,53 @@
 
 
 ## :rocket:快速使用
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6b71f9b8-cbb4-42e3-8d1d-3a30e37163b8)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/f06c65b6-b845-4e0e-ac5b-25e08040c8e4)
+
 
 ```
 python3运行此项目[我自己的环境是Python 3.9.7]，但是运行权限维持模块脚本请看上面的表格
 安装依赖
 pip install -r requirements.txt
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/1d4af51c-dfbe-484e-b70f-009214a4635c)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/9a679287-969d-4e44-ba6a-9d71a2ff512c)
+
 
 ```
 快速判断目标机器适合的权限维持模块，运行 /check/ 目录下的check.py文件[这个不需要任何依赖环境，python3和python2都支持]
 python check.py
+python3 check.py
+python2 check.py
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/db6bb1ad-4b7d-44d8-b0bd-bd1cca3e56a7)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/a497be9c-266c-4be2-9b9f-df99a7d589f7)
+
+
 
 ```
 查看权限维持模块信息
 python main.py -c 1
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6eb5f2c6-9870-4988-a2a8-67a8df71c0e2)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/280b5123-d626-4b79-bcdc-1001e3bf763e)
+
 ```
 查看权限维持模详细块信息
 python main.py -c 2
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/5937624c-b75b-4b51-a197-118b5a14f393)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/60183ad4-8b48-4562-9985-5fa15e4f54c2)
+
 
 ```
 使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
 python main.py -m 1   #选择模块
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6a816d82-201d-449d-b731-c0bd0d61232f)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/ca06dcc9-17d8-4132-82c1-f2635628d1e9)
+
 ```
 有的生成的脚本文件。需要在生成之后进行手动修改
 比如：修改反弹shellip以及端口，后门用户密码，ssh密钥密码，ssh密钥等[此缺陷将会在第二个版本修复]
 生成的文件会在payloads目录下产生
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/9c145fa7-01a9-45e6-bde3-1ecb973f16e7)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/1b4743a5-e55b-444c-883a-68f919eb9753)
+
 
 使用视频：https://www.bilibili.com/video/BV1fV411N7Qc/
 
