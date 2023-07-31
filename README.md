@@ -41,9 +41,17 @@
 | ssh软链接&crontab              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | root | 快速生成软链接[需要运行脚本成功后，一分钟连接]，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
 | check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star: | User         | 快速检测目标机器可以使用那个权限维持模块                     | :heavy_check_mark: | :heavy_check_mark: |
 
+<br/>
 
+##  :closed_lock_with_key:权限的划分
 
+| UID    | 数值                                                        | 比如：       |
+| ------ | ----------------------------------------------------------- | ------------ |
+| 0      | 超级管理员（root用户）                                      | root         |
+| 1～999 | Linux系统将一些服务程序和系统任务分配给独立的系统用户来运行 | bin          |
+| 1000   | 普通用户UID从1000开始                                       | www-data,www |
 
+<br/>
 
 ## :rocket:快速使用
 ![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/f06c65b6-b845-4e0e-ac5b-25e08040c8e4)
