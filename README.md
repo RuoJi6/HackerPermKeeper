@@ -228,7 +228,8 @@ ssh软链接&crontab
     3、在计划任务配合使用的时候，发现还需要判断文件有没有加锁
 ```
 
-
+## :beginner:开发日志
+<a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec">点击跳转wiki</a>
 
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
