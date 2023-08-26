@@ -91,7 +91,7 @@ def chooses():
                         Dowfile('payload/6sshkey/sshkey_local.py', 'sshkey_local.py')
                         break
                     elif i == '2':
-                        print('生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 root@ip  如果连接报错，请输入chmod 600 .11'
+                        print('生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 user@ip  如果连接报错，请输入chmod 600 .11'
                               '在对方服务器运行之后，下载/tmp/.11文件，这个文件就是密钥文件，下载之后可以删除，然后在连接')
                         Dowfile('payload/6sshkey/sshkey_target.py', 'sshkey_target.py')
                         break
@@ -132,7 +132,7 @@ def chooses():
                             Dowfile('payload/11crontab_key/etc_cron/ect_cron_ssh_local.py', 'ect_cron_ssh_local.py')
                         elif i =='2':
                             print(
-                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 root@ip  如果连接报错，请输入chmod 600 .11'
+                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 user@ip  如果连接报错，请输入chmod 600 .11'
                                 '在对方服务器运行之后，下载/tmp/.11文件，这个文件就是密钥文件，下载之后可以删除，然后在连接')
                             Dowfile('payload/11crontab_key/etc_cron/ect_cron_ssh_target.py', 'ect_cron_ssh_target.py')
                         else:
@@ -146,7 +146,7 @@ def chooses():
                             Dowfile('payload/11crontab_key/cron/cron_ssh_local.py', 'cron_ssh_local.py')
                         elif i == '2':
                             print(
-                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 root@ip  如果连接报错，请输入chmod 600 .11'
+                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 user@ip  如果连接报错，请输入chmod 600 .11'
                                 '在对方服务器运行之后，下载/tmp/.11文件，这个文件就是密钥文件，下载之后可以删除，然后在连接')
                             Dowfile('payload/11crontab_key/etc_cron/cron_ssh_target.py', 'cron_ssh_target.py')
                         else:
