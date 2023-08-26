@@ -125,7 +125,7 @@ def chooses():
                 elif a == str(11):
                     i = input('计划任务&ssk密钥后门：[1]使用/etc/文件维持 or [2]使用直接使用crontab命令维持:')
                     if i == '1':
-                        i = input('生成目标：[1]本地机器生成 or [2]目标机器生成:')
+                        i = input('ssh公私密钥后门分为：[1]在自己服务器生成 or [2]在目标机器生成:')
                         if i == '1':
                             print(
                                 '生成之后，运行ssh-keygen -t ed25519 -N "admin!@#45123", -N为密码，注意需要把id_ed25519.pub，填入生成的文件id_ed25519_pub变量中,连接ssh -i id_ed25519 user@ip  如果连接报错，请输入chmod 600 id_ed25519')
@@ -139,7 +139,7 @@ def chooses():
                             print('输入错误')
                         break
                     elif i == '2':
-                        i = input('生成目标：[1]本地机器生成 or [2]目标机器生成:')
+                        i = input('ssh公私密钥后门分为：[1]在自己服务器生成 or [2]在目标机器生成:')
                         if i == '1':
                             print(
                                 '生成之后，运行ssh-keygen -t ed25519 -N "admin!@#45123", -N为密码，注意需要把id_ed25519.pub，填入生成的文件id_ed25519_pub变量中,连接ssh -i id_ed25519 user@ip  如果连接报错，请输入chmod 600 id_ed25519')
