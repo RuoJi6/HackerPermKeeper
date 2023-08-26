@@ -29,20 +29,22 @@
 
 
 
-| :lock:权限维持模块           | centos             | Ubuntu             | 推荐指数                                         | 需要权限     | 备注                                                         | py2                | py3                |
-| :--------------------------- | ------------------ | ------------------ | ------------------------------------------------ | ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
-| OpenSSH后门万能密码&记录密码 | :x:                | :heavy_check_mark: | :star:                                           | root         | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :heavy_check_mark: |
-| PAM后门                      | :x:                | :x:                | :star:                                           | :x:          | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :x:                |
-| ssh软链接                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                 | root         | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
-| ssh公私密钥                  | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:   | User         | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
-| 后门帐号                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:                       | root         | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
-| crontab计划任务              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | User or root | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
-| Strace后门                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                 | root         | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
-| Alias后门                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | root         | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
-| Rootkit后门[检测]            | :x:                | :x:                | :star:	:star:	:star:                       | root         | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
-| 空格不记录命令               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star::star::star::star:     | root         | 有的服务器设置了空格记录执行命令，执行这个脚本快速设置不记录空格命令 | :heavy_check_mark: | :heavy_check_mark: |
-| ssh软链接&crontab              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:             | root | 快速生成软链接[需要运行脚本成功后，一分钟连接]，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
-| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star: | User         | 快速检测目标机器可以使用那个权限维持模块                     | :heavy_check_mark: | :heavy_check_mark: |
+| :lock:权限维持模块           | centos             | Ubuntu             | 推荐指数                                             | 需要权限     | 备注                                                         | py2                | py3                |
+| :--------------------------- | ------------------ | ------------------ | ---------------------------------------------------- | ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
+| OpenSSH后门万能密码&记录密码 | :x:                | :heavy_check_mark: | :star:                                               | root         | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :heavy_check_mark: |
+| PAM后门                      | :x:                | :x:                | :star:                                               | :x:          | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :x:                |
+| ssh软链接                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
+| ssh公私密钥                  | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | User         | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
+| 后门帐号                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:                           | root         | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
+| crontab计划任务              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | User or root | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
+| Strace后门                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
+| Alias后门                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
+| Rootkit后门[检测]            | :x:                | :x:                | :star:	:star:	:star:                           | root         | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
+| 空格不记录命令               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star::star::star::star:         | root         | 有的服务器设置了空格记录执行命令，执行这个脚本快速设置不记录空格命令 | :heavy_check_mark: | :heavy_check_mark: |
+| ssh软链接&crontab            | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 快速生成软链接，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
+| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star:     | User         | 快速检测目标机器可以使用那个权限维持模块                     | :heavy_check_mark: | :heavy_check_mark: |
+| sshkey密钥&crontab           | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
+| php权限维持不死免杀马        | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
 
 <br/>
 
