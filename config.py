@@ -10,7 +10,7 @@ init()
 
 
 def configs():
-    print(colored('HackerPermKeeper v2.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+    print(colored('HackerPermKeeper v3.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print('OpenSSH后门  优点：直接重置目标服务器的OpenSSH，在里面写入万能密码以及记录ssh明文账户代码 ''  缺点：需要依大量的依赖环境，而且只能使用低版本系统，目前经过测试的有乌班图14',colored('[建议指数：*]\n', 'red'))
 
@@ -37,13 +37,22 @@ def configs():
     print('项目地址：https://github.com/f0rb1dd3n/Reptile/\n')
 
     print(colored('9--------------不记录命令[history]', 'yellow'), colored('[利用]', 'blue'))
-    print('不记录命令[history]  优点：命令前加空格不记录命令   缺点：需要在命令前加空格',colored('[******]', 'red'))
+    print('不记录命令[history]  优点：命令前加空格不记录命令   缺点：需要在命令前加空格',colored('[******]\n', 'red'))
 
     print(colored('10--------------ssh软链接&crontab', 'yellow'), colored('[利用]', 'blue'))
-    print('快速生成软链接[需要运行脚本成功后，一分钟连接]，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行',colored('[*****]', 'red'))
+    print('快速生成软链接[需要运行脚本成功后，一分钟连接]，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行',colored('[*****]\n', 'red'))
+
+    print(colored('11--------------sshkey密钥&crontab', 'yellow'), colored('[利用]', 'blue'))
+    print('判断文件是否存在，判断文件是否加锁，判断文件内容是否符合，每分钟检查一次，不存在的话就重新生成执行',colored('[*****]\n', 'red'))
+
+    print(colored('12--------------php权限维持不死免杀马', 'yellow'), colored('[利用]', 'red'))
+    print('利用ignore_user_abort函数一直生成文件，同时修改连接命令，加密连接命令',colored('[*****]\n', 'red'))
+
+    print(colored('13--------------check检查脚本', 'yellow'), colored('[利用]', 'red'))
+    print('检测对方服务器适合什么类型的权限维持模块', colored('[*****]', 'red'))
 
 def configss():
-    print(colored('HackerPermKeeper v2.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+    print(colored('HackerPermKeeper v3.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'),colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'),colored('[利用]', 'red'))
@@ -54,3 +63,6 @@ def configss():
     print(colored('8--------------Rootkit后门', 'yellow'),colored('[检测]', 'blue'))
     print(colored('9--------------不记录命令[history]', 'yellow'), colored('[利用]', 'blue'))
     print(colored('10--------------ssh软链接&crontab', 'yellow'), colored('[利用]', 'red'))
+    print(colored('11--------------sshkey密钥&crontab', 'yellow'), colored('[利用]', 'red'))
+    print(colored('12--------------php权限维持不死免杀马', 'yellow'), colored('[利用]', 'red'))
+    print(colored('13--------------check检查脚本', 'yellow'), colored('[利用]', 'red'))

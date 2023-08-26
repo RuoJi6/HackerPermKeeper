@@ -60,6 +60,11 @@ def check_sshkey():
             print("Yes----ssh公私密钥后门")
         else:
             print("Yes----ssh公私密钥后门")
+    if os.access('/etc/ssh/sshd_config', os.W_OK):
+        # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
+        print('      可以修改sshd_config配置文件')
+    else:
+        print('      没有权限修改sshd_config文件')
 
 
 def check_adduser():
@@ -74,15 +79,13 @@ def check_adduser():
 
 
 def check_crontab():
-    cron_files = ["/etc/crontab"]
+    user = ml('whoami').strip()
+    user = '/var/spool/cron/' + user
+    cron_files = ["/etc/crontab", user, '/var/spool/cron/crontabs']
+    print('计划任务后门')
     for cron_file in cron_files:
         if os.access(cron_file, os.W_OK):
-            # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
-            print("yes----计划任务/etc/crontab后门")
-            print("yes----计划任务crontab命令后门")
-        else:
-            print("No----计划任务/etc/crontab后门")
-            print("yes----计划任务crontab命令后门")
+            print('  ' + cron_file + '---yes')
 
 
 def check_strace():
@@ -155,23 +158,29 @@ def delete_current_script():
     except Exception as e:
         print("无法删除当前脚本文件：", e)
 
-def ssh_Soft_link_cromtab():
-    j  = check_ssh_Soft_link()
-    cron_files = ["/etc/crontab"]
-    for cron_file in cron_files:
-        if os.access(cron_file, os.W_OK) and j ==1:
-            # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
-            print("yes----计划任务/etc/crontab&SSH软链接后门")
-            print("yes----计划任务crontab&SSH软链接后门")
-        else:
-            print("No----计划任务/etc/crontab&SSH软链接后门")
-            print("No----计划任务crontab&SSH软链接后门")
 
+def ssh_Soft_link_cromtab():
+    user = ml('whoami').strip()
+    user = '/var/spool/cron/' + user
+    cron_files = ["/etc/crontab", user, '/var/spool/cron/crontabs']
+    print('计划任务&ssh软链接后门')
+    for cron_file in cron_files:
+        if os.access(cron_file, os.W_OK):
+            print('  ' + cron_file + '---yes')
+
+def ssh_cromtab_ssh_key():
+    user = ml('whoami').strip()
+    user = '/var/spool/cron/' + user
+    cron_files = ["/etc/crontab", user, '/var/spool/cron/crontabs','/etc/ssh/sshd_config']
+    print('计划任务&sshkey后门')
+    for cron_file in cron_files:
+        if os.access(cron_file, os.W_OK):# （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
+            print('  ' + cron_file + '---yes')
 
 
 def check_user():
     user = ml('id').strip()
-    print('权限为'+str(user))
+    print('权限为' + str(user))
 
 
 if __name__ == '__main__':
@@ -186,5 +195,6 @@ if __name__ == '__main__':
     check_Rootkit()
     check_python()
     ssh_Soft_link_cromtab()
+    ssh_cromtab_ssh_key()
     check_user()
     delete_current_script()  # 删除当前执行脚本文件

