@@ -231,9 +231,9 @@ ssh软链接&crontab
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
 </details>
 
-<details>
-<summary><b>:world_map:版本更新</b></summary>
+<br/>
 
+## :world_map:版本更新
 ```
 1.0 权限维持
 ----------------------------------------------------------------------------------------------------------
@@ -252,12 +252,13 @@ ssh软链接&crontab
     3、在计划任务配合使用的时候，发现还需要判断文件有没有加锁
 ```
 
-</details>
 
-<details>
-<summary><b>:beginner:开发日志</b></summary>
+<br/>
+
+## :beginner:开发日志
 <a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec">点击跳转wiki</a>
-</details>
+
+<br/>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
