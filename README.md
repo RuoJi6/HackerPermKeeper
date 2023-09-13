@@ -25,9 +25,17 @@
 
 通过渗透拿到权限之后，为了不让权限丢失，都会进行权限维持，而在进行权限维持的时候，红队需要花费大量的时候，来验证是否合适，因此在这款工具就诞生 HackerPermKeeper[黑客权限保持者] 
 <br/>
-查看下面的表格可以知道生成的权限维持文件可以运行的python版本，但是这个项目本身是python3运行的[我自己的环境是Python 3.9.7]
+查看下面的支持系统列表可以知道生成的权限维持文件可以运行的python版本，但是这个项目本身是python3运行的
 
 
+
+## 🚀上手指南
+
+📢 请务必花一点时间阅读此文档，有助于你快速熟悉HackerPermKeeper
+<br/><br/>
+
+<details>
+<summary><b>:lock:支持系统列表</b></summary>
 
 | :lock:权限维持模块           | centos             | Ubuntu             | 推荐指数                                             | 需要权限     | 备注                                                         | py2                | py3                |
 | :--------------------------- | ------------------ | ------------------ | ---------------------------------------------------- | ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
@@ -46,12 +54,8 @@
 | sshkey密钥&crontab           | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
 | php权限维持不死免杀马        | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
 
-<br/>
+</details>
 
-## 🚀上手指南
-
-📢 请务必花一点时间阅读此文档，有助于你快速熟悉HackerPermKeeper
-<br/><br/>
 
 <details>
 <summary><b>:closed_lock_with_key:权限的划分</b></summary>
