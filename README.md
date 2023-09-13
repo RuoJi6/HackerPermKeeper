@@ -48,7 +48,13 @@
 
 <br/>
 
-##  :closed_lock_with_key:权限的划分
+## 🚀上手指南
+
+📢 请务必花一点时间阅读此文档，有助于你快速熟悉HackerPermKeeper
+<br/><br/>
+
+<details>
+<summary><b>:closed_lock_with_key:权限的划分</b></summary>
 
 | UID    | 数值                                                        | 比如：       |
 | ------ | ----------------------------------------------------------- | ------------ |
@@ -56,19 +62,25 @@
 | 1～999 | Linux系统将一些服务程序和系统任务分配给独立的系统用户来运行 | bin          |
 | 1000   | 普通用户UID从1000开始                                       | www-data,www |
 
-<br/>
+</details>
 
-## :rocket:快速使用
+<details>
+<summary><b>🐍安装要求</b></summary>
+  
 ![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/f06c65b6-b845-4e0e-ac5b-25e08040c8e4)
-
 
 ```
 python3运行此项目[我自己的环境是Python 3.9.7]，但是运行权限维持模块脚本请看上面的表格
 安装依赖
 pip install -r requirements.txt
 ```
+  
 ![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/9a679287-969d-4e44-ba6a-9d71a2ff512c)
 
+</details>
+
+<details>
+<summary><b>✨使用演示</b></summary>
 
 ```
 快速判断目标机器适合的权限维持模块，运行 /check/ 目录下的check.py文件[这个不需要任何依赖环境，python3和python2都支持]
@@ -108,9 +120,11 @@ python main.py -m 1   #选择模块
 
 
 使用视频：https://www.bilibili.com/video/BV1fV411N7Qc/
+</details>
 
+<details>
+<summary><b>:triangular_flag_on_post:	常见后门介绍</b></summary>
 
-## :triangular_flag_on_post:	常见后门介绍
 ```
 OpenSSH后门万能密码&记录密码（这个需要依赖环境），就是把对方的门换个锁，但是原来的钥匙也可以使用
 发现程度：||
@@ -182,7 +196,12 @@ ssh软链接&crontab
 
 ```
 
-## :warning:错误error
+</details>
+
+
+<details>
+<summary><b>:warning:常见错误error</b></summary>
+
 ```
 1、
 使用ssh密钥后门连接的时候，出现这个错误，就是当前ip有在known_hosts中存在多个主机文件
@@ -201,17 +220,20 @@ ssh软链接&crontab
 ```
 ![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/8d9262ac-1555-466d-8ed7-197fb9521d43)
 
+</details>
 
-<br/><br/>
-## :zap:提交问题
+<details>
+<summary><b>:zap:提交问题</b></summary>
 有问题请提交issues<br/>
 <a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
 <br/>
 加我微信进开发者微信群聊 
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
-<br/><br/>
+</details>
 
-## :world_map:版本更新
+<details>
+<summary><b>:world_map:版本更新</b></summary>
+
 ```
 1.0 权限维持
 ----------------------------------------------------------------------------------------------------------
@@ -230,9 +252,12 @@ ssh软链接&crontab
     3、在计划任务配合使用的时候，发现还需要判断文件有没有加锁
 ```
 
-## :beginner:开发日志
-<a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec">点击跳转wiki</a>
+</details>
 
+<details>
+<summary><b>:beginner:开发日志</b></summary>
+<a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec">点击跳转wiki</a>
+</details>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
