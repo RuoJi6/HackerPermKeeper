@@ -25,7 +25,7 @@ def Dowfile(input_files,file_name):
 def chooses():
     s = []
     i = 0
-    print(colored('HackerPermKeeper v3.0 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+    print(colored('HackerPermKeeper v4.0 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'),colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'),colored('[利用]', 'red'))
