@@ -44,7 +44,7 @@
 | Rootkit后门[检测]            | :x:                | :x:                | :star:	:star:	:star:                           | root         | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
 | 空格不记录命令               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star::star::star::star:         | root         | 有的服务器设置了空格记录执行命令，执行这个脚本快速设置不记录空格命令 | :heavy_check_mark: | :heavy_check_mark: |
 | ssh软链接&crontab            | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 快速生成软链接，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
-| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star:     | User         | 快速检测目标机器可以使用那个权限维持模块                     | :heavy_check_mark: | :heavy_check_mark: |
+| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star:     | User         | 快速检测目标机器可以使用那个权限维持模块，并且检测当前机器处于docker还是k8s，并检测docker逃逸| :heavy_check_mark: | :heavy_check_mark: |
 | sshkey密钥&crontab           | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
 | php权限维持不死免杀马        | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -86,7 +86,7 @@ python check.py
 python3 check.py
 python2 check.py
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/a497be9c-266c-4be2-9b9f-df99a7d589f7)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/975b8afd-cb91-46e5-8de7-16d0774d33ce)
 
 
 
@@ -250,6 +250,11 @@ ssh软链接&crontab
     3、在计划任务配合使用的时候，发现还需要判断文件有没有加锁
 ----------------------------------------------------------------------------------------------------------
 4.0 1、修改ssh密钥以及添加用户中重新运行时候，检测是否加锁解锁操作
+----------------------------------------------------------------------------------------------------------
+5.0 1、检测docker，k8s环境
+    2、检测docker逃逸，特权逃逸，Docker Socket逃逸，docker procfs逃逸[以后会添加针对k8s横向以及逃逸]
+    3、别名权限维持文件不存在bug修复
+    4、修复检测脚本bug
 ```
 
 
