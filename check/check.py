@@ -60,11 +60,14 @@ def check_sshkey():
             print("Yes----ssh公私密钥后门")
         else:
             print("Yes----ssh公私密钥后门")
-    if os.access('/etc/ssh/sshd_config', os.W_OK):
-        # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
-        print('      可以修改sshd_config配置文件')
+    if os.path.exists('/etc/ssh/sshd_config'):
+        if os.access('/etc/ssh/sshd_config', os.W_OK):
+            # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
+            print('      可以修改sshd_config配置文件')
+        else:
+            print('      没有权限修改sshd_config文件')
     else:
-        print('      没有权限修改sshd_config文件')
+        print('      sshd_config配置文件文件不存在')
 
 
 def check_adduser():
@@ -168,14 +171,35 @@ def ssh_Soft_link_cromtab():
         if os.access(cron_file, os.W_OK):
             print('  ' + cron_file + '---yes')
 
+
 def ssh_cromtab_ssh_key():
     user = ml('whoami').strip()
     user = '/var/spool/cron/' + user
-    cron_files = ["/etc/crontab", user, '/var/spool/cron/crontabs','/etc/ssh/sshd_config']
+    cron_files = ["/etc/crontab", user, '/var/spool/cron/crontabs', '/etc/ssh/sshd_config']
     print('计划任务&sshkey后门')
     for cron_file in cron_files:
-        if os.access(cron_file, os.W_OK):# （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
+        if os.access(cron_file, os.W_OK):  # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
             print('  ' + cron_file + '---yes')
+
+
+def docker_k8s():
+    if 'docker' in ml('cat /proc/1/cgroup'):
+        print('-------------------->docker<---------------------')
+        docker_k8s_esc()
+    elif 'kubepods' in ml('cat /proc/1/cgroup'):
+        print('-------------------->k8s<---------------------')
+        docker_k8s_esc()
+
+
+def docker_k8s_esc():
+    dock = ml('cat /proc/self/status | grep CapEff')
+    if '0000001fffffffff' in dock or '0000001fffffffff' in dock:
+        print('docker特权逃逸')
+    if os.path.exists('/var/run/docker.sock'):
+        print("Docker Socket逃逸")
+    prsof = ml('find / -name core_pattern')
+    if '/host/proc/sys/kernel/core_pattern' in prsof and '/proc/sys/kernel/core_pattern' in prsof:
+        print("docker procfs逃逸")
 
 
 def check_user():
@@ -184,7 +208,7 @@ def check_user():
 
 
 if __name__ == '__main__':
-    print('HackerPermKeeper v2.0')
+    print('HackerPermKeeper v5.0')
     print('OpenSSH后门太过久远，而且很可能会导致ssh连接报错，所以不建议使用[只测试过乌班图14版本成功]')
     check_adduser()
     check_alerts()
@@ -197,4 +221,5 @@ if __name__ == '__main__':
     ssh_Soft_link_cromtab()
     ssh_cromtab_ssh_key()
     check_user()
+    docker_k8s()
     delete_current_script()  # 删除当前执行脚本文件

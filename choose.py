@@ -21,10 +21,10 @@ def Dowfile(input_files, file_name):
         print(f'生成成功,文件为：/payloads/{file_name}')
 
 
-def chooses():
+def chooses(name_data):
     s = []
     i = 0
-    print(colored('HackerPermKeeper v4.0 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+    print(colored(name_data, 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'), colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'), colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'), colored('[利用]', 'red'))
@@ -122,7 +122,6 @@ def chooses():
                     else:
                         print('输入错误')
                         break
-                    break
                 elif a == str(11):
                     i = input('计划任务&ssk密钥后门：[1]使用/etc/文件维持 or [2]使用直接使用crontab命令维持:')
                     if i == '1':

@@ -9,8 +9,8 @@ from termcolor import colored
 init()
 
 
-def configs():
-    print(colored('HackerPermKeeper v4.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+def configs(name_data):
+    print(colored(name_data, 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print('OpenSSH后门  优点：直接重置目标服务器的OpenSSH，在里面写入万能密码以及记录ssh明文账户代码 ''  缺点：需要依大量的依赖环境，而且只能使用低版本系统，目前经过测试的有乌班图14',colored('[建议指数：*]\n', 'red'))
 
@@ -49,10 +49,10 @@ def configs():
     print('利用ignore_user_abort函数一直生成文件，同时修改连接命令，加密连接命令',colored('[*****]\n', 'red'))
 
     print(colored('13--------------check检查脚本', 'yellow'), colored('[利用]', 'red'))
-    print('检测对方服务器适合什么类型的权限维持模块', colored('[*****]', 'red'))
+    print('快速检测目标机器可以使用那个权限维持模块，并且检测当前机器处于docker还是k8s，并检测docker逃逸', colored('[*****]', 'red'))
 
-def configss():
-    print(colored('HackerPermKeeper v4.0 by 弱鸡 支持以下漏洞检测 https://github.com/RuoJi6/HackerPermKeeper', 'green'))
+def configss(name_data):
+    print(colored(name_data, 'green'))
     print(colored('1--------------OpenSSH后门', 'yellow'),colored('[利用]', 'red'))
     print(colored('2--------------后门用户', 'yellow'),colored('[利用]', 'red'))
     print(colored('3--------------Alias后门', 'yellow'),colored('[利用]', 'red'))

