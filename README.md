@@ -65,20 +65,35 @@
 <details>
 <summary><b>🐍安装要求</b></summary>
   
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/f06c65b6-b845-4e0e-ac5b-25e08040c8e4)
-
 ```
 python3运行此项目[我自己的环境是Python 3.9.7]，但是运行权限维持模块脚本请看上面的表格
 安装依赖
 pip install -r requirements.txt
 ```
   
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/9a679287-969d-4e44-ba6a-9d71a2ff512c)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/917d5afc-1775-4bcc-82d0-c9adb7cf89b7)
+
+```
+测试是否正常运行
+python main.py -h
+```
+
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/307c1e3b-8721-43be-be4b-ccd64a98a8cf)
+
+
+
 
 </details>
 
 <details>
 <summary><b>✨使用演示</b></summary>
+
+```
+查看帮助
+python main.py -h
+```
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/307c1e3b-8721-43be-be4b-ccd64a98a8cf)
+
 
 ```
 快速判断目标机器适合的权限维持模块，运行 /check/ 目录下的check.py文件[这个不需要任何依赖环境，python3和python2都支持]
@@ -94,27 +109,28 @@ python2 check.py
 查看权限维持模块信息
 python main.py -c 1
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/280b5123-d626-4b79-bcdc-1001e3bf763e)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/caea7709-38e9-44b9-a3fd-1b533762df61)
+
 
 ```
 查看权限维持模详细块信息
 python main.py -c 2
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/60183ad4-8b48-4562-9985-5fa15e4f54c2)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/488f5359-2d95-400c-9fa2-181a925892ca)
 
 
 ```
 使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
 python main.py -m 1   #选择模块
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/ca06dcc9-17d8-4132-82c1-f2635628d1e9)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/62e9e8bd-e710-4958-b83f-41cf4738bd75)
 
 ```
 有的生成的脚本文件。需要在生成之后进行手动修改
 比如：修改反弹shellip以及端口，后门用户密码，ssh密钥密码，ssh密钥等[此缺陷将会在第二个版本修复]
 生成的文件会在payloads目录下产生
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/1b4743a5-e55b-444c-883a-68f919eb9753)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/4e3a900a-d861-44f1-8c96-e21c8013b9c2)
 
 
 使用视频：https://www.bilibili.com/video/BV1fV411N7Qc/
