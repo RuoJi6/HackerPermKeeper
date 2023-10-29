@@ -26,22 +26,23 @@
 <details>
 <summary><b>:lock:支持系统列表</b></summary>
 
-| :lock:权限维持模块           | centos             | Ubuntu             | 推荐指数                                             | 需要权限     | 备注                                                         | py2                | py3                |
-| :--------------------------- | ------------------ | ------------------ | ---------------------------------------------------- | ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
-| OpenSSH后门万能密码&记录密码 | :x:                | :heavy_check_mark: | :star:                                               | root         | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :heavy_check_mark: |
-| PAM后门                      | :x:                | :x:                | :star:                                               | :x:          | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :x:                |
-| ssh软链接                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
-| ssh公私密钥                  | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | User         | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
-| 后门帐号                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:                           | root         | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
-| crontab计划任务              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | User or root | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
-| Strace后门                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
-| Alias后门                    | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
-| Rootkit后门[检测]            | :x:                | :x:                | :star:	:star:	:star:                           | root         | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
-| 空格不记录命令               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star::star::star::star:         | root         | 有的服务器设置了空格记录执行命令，执行这个脚本快速设置不记录空格命令 | :heavy_check_mark: | :heavy_check_mark: |
-| ssh软链接&crontab            | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 快速生成软链接，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
-| check.py                     | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star:     | User         | 快速检测目标机器可以使用那个权限维持模块，并且检测当前机器处于docker还是k8s，并检测docker逃逸| :heavy_check_mark: | :heavy_check_mark: |
-| sshkey密钥&crontab           | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
-| php权限维持不死免杀马        | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
+| :lock:权限维持模块                      | centos             | Ubuntu             | 推荐指数                                             | 需要权限     | 备注                                                         | py2                | py3                |
+| :-------------------------------------- | ------------------ | ------------------ | ---------------------------------------------------- | ------------ | ------------------------------------------------------------ | ------------------ | ------------------ |
+| OpenSSH后门万能密码&记录密码            | :x:                | :heavy_check_mark: | :star:                                               | root         | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :heavy_check_mark: |
+| PAM后门                                 | :x:                | :x:                | :star:                                               | :x:          | 此后门需要很老的内核版本，而且需要很多依赖环境               | :x:                | :x:                |
+| ssh软链接                               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 容易被发现                                                   | :heavy_check_mark: | :heavy_check_mark: |
+| ssh公私密钥                             | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | User         | 发现程度很难，参考了挖矿病毒                                 | :heavy_check_mark: | :heavy_check_mark: |
+| 后门帐号                                | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:                           | root         | 用命令添加账户，不会创建用户home目录[有一个是直接指向root目录] | :heavy_check_mark: | :heavy_check_mark: |
+| crontab计划任务                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | User or root | 难以发现，通过执行计划任务                                   | :heavy_check_mark: | :heavy_check_mark: |
+| Strace后门                              | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:                                     | root         | 键盘记录的后门                                               | :heavy_check_mark: | :heavy_check_mark: |
+| Alias后门                               | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 别名后门，难以发现，但是需要用户去执行命令                   | :heavy_check_mark: | :heavy_check_mark: |
+| Rootkit后门[检测]                       | :x:                | :x:                | :star:	:star:	:star:                           | root         | 难以发现，但是安装复杂，而且指定内核版本                     | :x:                | :x:                |
+| 临时history不记录命令 or 永久不记录命令 | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star::star::star::star:         | root         | 有的服务器设置了空格记录执行命令，执行这个脚本快速设置不记录空格命令 | :heavy_check_mark: | :heavy_check_mark: |
+| ssh软链接&crontab                       | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:                 | root         | 快速生成软链接，并且执行计划任务，每分钟判断当前软链接是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
+| check.py                                | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star::star:     | User         | 快速检测目标机器可以使用那个权限维持模块，并且检测当前机器处于docker还是k8s，并检测docker逃逸 | :heavy_check_mark: | :heavy_check_mark: |
+| sshkey密钥&crontab                      | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
+| php权限维持不死免杀马                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
+| Suid shell bash                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | Suid shell bash脚本(低权限用户运行),可以和webshell进行联动一个低权限用户只需要执行一个文件就可以获取高权限 | :heavy_check_mark: | :heavy_check_mark: |
 
 </details>
 
@@ -72,9 +73,7 @@ pip install -r requirements.txt
 测试是否正常运行
 python main.py -h
 ```
-
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/307c1e3b-8721-43be-be4b-ccd64a98a8cf)
-
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/d4c4b282-6570-4b3e-ba97-d27e7eaef42b)
 
 
 
@@ -87,7 +86,8 @@ python main.py -h
 查看帮助
 python main.py -h
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/307c1e3b-8721-43be-be4b-ccd64a98a8cf)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/b2216e6b-c07c-4ee6-9768-3da79c6d9932)
+
 
 
 ```
@@ -104,21 +104,22 @@ python2 check.py
 查看权限维持模块信息
 python main.py -c 1
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/caea7709-38e9-44b9-a3fd-1b533762df61)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/a15340cc-6586-4541-9345-55ef3a8873a8)
+
 
 
 ```
 查看权限维持模详细块信息
 python main.py -c 2
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/488f5359-2d95-400c-9fa2-181a925892ca)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/59a86236-1e03-4ea9-8b48-d14d57451317)
 
 
 ```
 使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
-python main.py -m 1   #选择模块
+python main.py -m 1   #选择模块[6.0更新之后，可以连续选择]
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/62e9e8bd-e710-4958-b83f-41cf4738bd75)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/39ef1e60-bb7e-4e4c-8108-6eb76c1be876)
 
 ```
 有的生成的脚本文件。需要在生成之后进行手动修改
