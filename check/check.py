@@ -31,21 +31,6 @@ def check_alerts():
         print("No----alerts后门")
 
 
-def get_files_in_current_directory():
-    current_directory = '/root/.ssh/'
-    try:
-        files = os.listdir(current_directory)
-
-        file_names = []
-        for file in files:
-            if os.path.isfile(os.path.join(current_directory, file)):
-                file_names.append(file)
-
-        return file_names
-    except Exception as e:
-        return 'No'
-
-
 def check_sshkey():
     user = ml('whoami').strip()
     if 'root' in user:
@@ -63,11 +48,11 @@ def check_sshkey():
     if os.path.exists('/etc/ssh/sshd_config'):
         if os.access('/etc/ssh/sshd_config', os.W_OK):
             # （例如 os.R_OK 表示可读，os.W_OK 表示可写，os.X_OK 表示可执行）
-            print('      可以修改sshd_config配置文件')
+            print('   可以修改sshd_config配置文件')
         else:
-            print('      没有权限修改sshd_config文件')
+            print('   没有权限修改sshd_config文件')
     else:
-        print('      sshd_config配置文件文件不存在')
+        print('   sshd_config配置文件文件不存在')
 
 
 def check_adduser():
@@ -137,31 +122,6 @@ def check_Rootkit():
         print("No----Rootkit后门")
 
 
-def check_python():
-    try:
-        j = ml('python3 -V')
-        if 'Python 3' in j:
-            print("yes----python3")
-        else:
-            print("No----python")
-        # 检查 Python 2
-        output = subprocess.Popen(['python2', '-V'], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-        if 'Python 2' in output[1].decode():
-            print("yes----python2")
-            return
-    except OSError:
-        pass
-
-
-def delete_current_script():
-    try:
-        script_path = os.path.abspath(sys.argv[0])
-        os.remove(script_path)
-        print("当前脚本文件已成功删除" + script_path)
-    except Exception as e:
-        print("无法删除当前脚本文件：", e)
-
-
 def ssh_Soft_link_cromtab():
     user = ml('whoami').strip()
     user = '/var/spool/cron/' + user
@@ -183,11 +143,13 @@ def ssh_cromtab_ssh_key():
 
 
 def docker_k8s():
-    if 'docker' in ml('cat /proc/1/cgroup'):
-        print('-------------------->docker<---------------------')
+    if 'kubepods' in ml('cat /proc/1/cgroup'):
+        print('----------------->container<---------------')
+        print('{kubepods k8s}')
         docker_k8s_esc()
-    elif 'kubepods' in ml('cat /proc/1/cgroup'):
-        print('-------------------->k8s<---------------------')
+    elif 'docker' in ml('cat /proc/1/cgroup'):
+        print('----------------->container<---------------')
+        print('{docker}')
         docker_k8s_esc()
 
 
@@ -207,9 +169,42 @@ def check_user():
     print('权限为' + str(user))
 
 
+def check_path():
+    print("------------------->{path}<--------------------")
+    try:
+        languages = {
+            "Python2": "python2",
+            "Python3": "python3",
+            "Java": "java",
+            "Docker": "docker",
+            "PHP": "php",
+            "Kubernetes": "kubectl",
+            "Rust": "rust",
+            "C++": "g++",
+        }
+        for lang_name, lang_cmd in languages.items():
+            try:
+                if subprocess.call(["which", lang_cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE) == 0:
+                    print(lang_name + " 已安装")
+            except subprocess.CalledProcessError:
+                pass
+    except Exception as e:
+        print('错误:---------------------------')
+        print(e)
+
+
+def delete_current_script():
+    try:
+        script_path = os.path.abspath(sys.argv[0])
+        os.remove(script_path)
+        print("当前脚本文件已成功删除" + script_path)
+    except Exception as e:
+        print("无法删除当前脚本文件：", e)
+
+
 if __name__ == '__main__':
-    print('HackerPermKeeper v5.0')
-    print('OpenSSH后门太过久远，而且很可能会导致ssh连接报错，所以不建议使用[只测试过乌班图14版本成功]')
+    print('-----------{HackerPermKeeper v6.0}-------------')
+    print('OpenSSH后门[只测试过乌班图14版本成功]')
     check_adduser()
     check_alerts()
     check_crontab()
@@ -217,9 +212,9 @@ if __name__ == '__main__':
     check_sshkey()
     check_strace()
     check_Rootkit()
-    check_python()
     ssh_Soft_link_cromtab()
     ssh_cromtab_ssh_key()
     check_user()
     docker_k8s()
+    check_path()
     delete_current_script()  # 删除当前执行脚本文件

