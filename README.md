@@ -104,7 +104,8 @@ python check.py
 python3 check.py
 python2 check.py
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/975b8afd-cb91-46e5-8de7-16d0774d33ce)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/6ed3488a-1eab-492a-8b5b-f8072339033d)
+
 
 
 
