@@ -119,14 +119,14 @@ python main.py -c 2
 使用此项目生成权限维持脚本[在这之前，请先运行check.py脚本判断出目标机器适合什么类型权限维持的脚本]
 python main.py -m 1   #选择模块[6.0更新之后，可以连续选择]
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/39ef1e60-bb7e-4e4c-8108-6eb76c1be876)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/2cb4a5a6-76e7-4da5-8000-b8d080070914)
 
 ```
 有的生成的脚本文件。需要在生成之后进行手动修改
 比如：修改反弹shellip以及端口，后门用户密码，ssh密钥密码，ssh密钥等[此缺陷将会在第二个版本修复]
 生成的文件会在payloads目录下产生
 ```
-![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/4e3a900a-d861-44f1-8c96-e21c8013b9c2)
+![image](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/8e9c3c6e-21a3-4a14-adc3-632f08da434a)
 
 
 使用视频：https://www.bilibili.com/video/BV1fV411N7Qc/
