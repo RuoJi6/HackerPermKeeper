@@ -295,6 +295,14 @@ ssh软链接&crontab
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
 
 
+## Stargazers
+
+[![Stargazers repo roster for @RuoJi6/HackerPermKeeper](http://reporoster.com/stars/RuoJi6/HackerPermKeeper)](https://github.com/RuoJi6/HackerPermKeeper/stargazers)
+
+
+## Forkers
+
+[![Forkers repo roster for @RuoJi6/HackerPermKeeper](http://reporoster.com/forks/RuoJi6/HackerPermKeeper)](https://github.com/RuoJi6/HackerPermKeeper/network/members)
 
 
 <a href="https://github.com/RuoJi6">
