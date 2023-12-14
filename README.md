@@ -288,7 +288,7 @@ ssh软链接&crontab
 <br/>
 
 ## :beginner:开发日志
-<a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec">点击跳转wiki</a>
+<a href="[https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec](https://flowus.cn/ruoji/share/e6d74e95-980b-462c-92ca-f50ce0ee420c)">点击跳转wiki</a>
 
 <br/>
 
