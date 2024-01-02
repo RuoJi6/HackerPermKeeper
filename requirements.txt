@@ -1,0 +1,4 @@
+colorama
+termcolor
+argparse
+tabulate
