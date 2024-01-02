@@ -56,7 +56,7 @@
 | Suid shell bash                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | Suid shell bash脚本(低权限用户运行),可以和webshell进行联动一个低权限用户只需要执行一个文件就可以获取高权限 | :heavy_check_mark: | :heavy_check_mark: |
 | BT面板后渗透[bt_Tools_v7.0]内部版                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | BT面板后渗透【bt_Tools_v7.0】内部版                  | :heavy_check_mark: | :heavy_check_mark: |
 
-![BT渗透](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/7b36e73b-005f-44e7-9cba-e3d31fd3021d)
+![BT渗透](https://github.com/RuoJi6/HackerPermKeeper/blob/main/images/BT%E6%B8%97%E9%80%8F.png)
 
 
 </details>
