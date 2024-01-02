@@ -56,7 +56,7 @@
 | Suid shell bash                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | Suid shell bash脚本(低权限用户运行),可以和webshell进行联动一个低权限用户只需要执行一个文件就可以获取高权限 | :heavy_check_mark: | :heavy_check_mark: |
 | BT面板后渗透[bt_Tools_v7.0]内部版                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | BT面板后渗透【bt_Tools_v7.0】内部版                  | :heavy_check_mark: | :heavy_check_mark: |
 
-![BT渗透](https://github.com/RuoJi6/HackerPermKeeper/blob/main/images/BT%E6%B8%97%E9%80%8F.png)
+![BT渗透](https://github.com/RuoJi6/HackerPermKeeper/assets/79234113/7b36e73b-005f-44e7-9cba-e3d31fd3021d)
 
 
 </details>
@@ -289,6 +289,12 @@ ssh软链接&crontab
     3、添加不记录历史命令临时操作，同时可以批量删除指定的.bash_history文件中的历史记录
     4、修改检查脚本(添加检查环境)
     5、使用tabulate模块进行格式化输出
+----------------------------------------------------------------------------------------------------------
+7.0 bt_Tools
+    1、Suid shell bash检测判断
+    2、重写生成代码(优化商城模块)
+    3、BT后渗透脚本编写
+        A. BT linux面板后渗透编写[详情查看思维导图]
 ```
 
 
