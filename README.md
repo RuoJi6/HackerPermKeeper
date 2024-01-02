@@ -56,8 +56,6 @@
 | Suid shell bash                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | Suid shell bash脚本(低权限用户运行),可以和webshell进行联动一个低权限用户只需要执行一个文件就可以获取高权限 | :heavy_check_mark: | :heavy_check_mark: |
 | BT面板后渗透[bt_Tools_v7.0]内部版                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | BT面板后渗透【bt_Tools_v7.0】内部版                  | :heavy_check_mark: | :heavy_check_mark: |
 
-![BT渗透](/images/BT渗透.png)
-
 
 </details>
 
@@ -302,7 +300,7 @@ ssh软链接&crontab
 
 ## :beginner:开发日志
 <a href="https://flowus.cn/ruoji/share/57079f81-d391-478e-88c8-329c93371723">点击跳转</a>
-
+![BT渗透](/images/BT渗透.png)
 <br/>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
