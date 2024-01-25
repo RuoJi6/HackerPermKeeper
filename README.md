@@ -25,7 +25,7 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 通过渗透拿到权限之后，为了不让权限丢失，都会进行权限维持，而在进行权限维持的时候，红队需要花费大量的时候，来验证是否合适，因此在这款工具就诞生 HackerPermKeeper[黑客权限保持者] 
 <br/>
-【由于新版本危害较大，BT功能只供内部使用-->bt_Tools_v7.0】
+【由于新版本危害较大，BT功能只供内部使用-->bt_T00ls_v7.0】
 <br/><br/>
 
 
@@ -54,7 +54,7 @@
 | sshkey密钥&crontab                      | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | 快速生成ssh密钥，并且执行计划任务，每分钟判断当前密钥和多个文件是否存在，如果被kill掉，就重新执行 | :heavy_check_mark: | :heavy_check_mark: |
 | php权限维持不死免杀马                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star::star:	:star: | User or root | phpweb权限维持马                                             | :heavy_check_mark: | :heavy_check_mark: |
 | Suid shell bash                         | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | Suid shell bash脚本(低权限用户运行),可以和webshell进行联动一个低权限用户只需要执行一个文件就可以获取高权限 | :heavy_check_mark: | :heavy_check_mark: |
-| BT面板后渗透[bt_Tools_v7.0]内部版                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | BT面板后渗透【bt_Tools_v7.0】内部版                  | :heavy_check_mark: | :heavy_check_mark: |
+| BT面板后渗透[bt_T00ls_v7.0]内部版                   | :heavy_check_mark: | :heavy_check_mark: | :star:	:star:	:star:	:star:	:star:       | root         | BT面板后渗透【bt_T00ls_v7.0】内部版                  | :heavy_check_mark: | :heavy_check_mark: |
 
 
 </details>
@@ -288,7 +288,7 @@ ssh软链接&crontab
     4、修改检查脚本(添加检查环境)
     5、使用tabulate模块进行格式化输出
 ----------------------------------------------------------------------------------------------------------
-7.0 bt_Tools
+7.0 bt_T00ls
     1、Suid shell bash检测判断
     2、重写生成代码(优化商城模块)
     3、BT后渗透脚本编写
