@@ -27,7 +27,7 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 通过渗透拿到权限之后，为了不让权限丢失，都会进行权限维持，而在进行权限维持的时候，红队需要花费大量的时候，来验证是否合适，因此在这款工具就诞生 HackerPermKeeper[黑客权限保持者] 
 <br/>
-【由于新版本危害较大，BT功能只供内部使用-->bt_T00ls_v7.0】
+【由于新版本危害较大，BT面板功能只供内部使用-->bt_T00ls_v7.0】
 【解压密码:v_ruoji_50】
 <br/><br/>
 
@@ -250,6 +250,17 @@ ssh软链接&crontab
 </details>
 
 <details>
+<summary><b>:bulb:baota面板渗透示例</b></summary>
+
+![BT渗透](./images/BT渗透.png)
+![dsadjklasjdkljl](./images/dsadjklasjdkljl.png)
+![微信图片_20240126095121](./images/微信图片_20240126095121.png)
+![微信截图_20240126095007](./images/微信截图_20240126095007.png)
+![微信截图_20240126095044](./images/微信截图_20240126095044.png)
+  
+</details>
+
+<details>
 <summary><b>:zap:提交问题</b></summary>
 有问题请提交issues<br/>
 <a href="https://github.com/RuoJi6/HackerPermKeeper/issues"><img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper"></a>
@@ -257,6 +268,7 @@ ssh软链接&crontab
 加我微信进开发者微信群聊 
 <br/><img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-green">
 </details>
+
 
 <br/>
 
@@ -303,11 +315,10 @@ ssh软链接&crontab
 
 ## :beginner:开发日志
 <a href="https://flowus.cn/ruoji/share/57079f81-d391-478e-88c8-329c93371723">点击跳转</a>
-![BT渗透](./images/BT渗透.png)
-![dsadjklasjdkljl](./images/dsadjklasjdkljl.png)
-![微信图片_20240126095121](./images/微信图片_20240126095121.png)
-![微信截图_20240126095007](./images/微信截图_20240126095007.png)
-![微信截图_20240126095044](./images/微信截图_20240126095044.png)
+
+
+
+
 <br/>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
