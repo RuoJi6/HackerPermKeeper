@@ -303,6 +303,10 @@ ssh软链接&crontab
 ## :beginner:开发日志
 <a href="https://flowus.cn/ruoji/share/57079f81-d391-478e-88c8-329c93371723">点击跳转</a>
 ![BT渗透](/images/BT渗透.png)
+![BT渗透](/images/dsadjklasjdkljl.png)
+![BT渗透](/images/微信图片_20240126095121.png)
+![BT渗透](/images/微信截图_20240126095007.png)
+![BT渗透](/images/微信截图_20240126095044.png)
 <br/>
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
