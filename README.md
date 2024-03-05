@@ -20,7 +20,7 @@
     <img src="https://badgen.net/github/stars/RuoJi6/HackerPermKeeper/?icon=github&color=black">
     <img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper">
     <img src="https://img.shields.io/badge/python%E7%89%88%E6%9C%AC-3_and_2-green">
-    <a href="https://flowus.cn/share/3505271f-a987-4fb1-9623-efe58dcc77ec" style="text-decoration:none;">
+    <a href="https://flowus.cn/ruoji/share/57079f81-d391-478e-88c8-329c93371723" style="text-decoration:none;">
      <img src="https://img.shields.io/badge/%E6%96%87%E5%BA%93-wiki-yellow">
     </a>
 </p>
