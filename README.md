@@ -16,7 +16,6 @@
       <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-www.ruojisec.com-blue" />
     </a>
     <img alt="GitHub Contributors" src="https://img.shields.io/badge/%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F-One--fox-pink" />
-    <img src="https://img.shields.io/badge/WeChat-vivo50KFCKFC-black">
     <img src="https://badgen.net/github/stars/RuoJi6/HackerPermKeeper/?icon=github&color=black">
     <a href="https://github.com/RuoJi6/HackerPermKeeper/releases"><img src="https://img.shields.io/github/downloads/RuoJi6/HackerPermKeeper/total?color=blueviolet"></a>
     <img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper">
