@@ -20,9 +20,6 @@
     <a href="https://github.com/RuoJi6/HackerPermKeeper/releases"><img src="https://img.shields.io/github/downloads/RuoJi6/HackerPermKeeper/total?color=blueviolet"></a>
     <img src="https://badgen.net/github/issues/RuoJi6/HackerPermKeeper">
     <img src="https://img.shields.io/badge/python%E7%89%88%E6%9C%AC-3_and_2-green">
-    <a href="https://flowus.cn/ruoji/share/57079f81-d391-478e-88c8-329c93371723" style="text-decoration:none;">
-     <img src="https://img.shields.io/badge/%E6%96%87%E5%BA%93-wiki-yellow">
-    </a>
 </p>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 通过渗透拿到权限之后，为了不让权限丢失，都会进行权限维持，而在进行权限维持的时候，红队需要花费大量的时候，来验证是否合适，因此在这款工具就诞生 HackerPermKeeper[黑客权限保持者] 
