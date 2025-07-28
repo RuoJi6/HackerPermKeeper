@@ -29,6 +29,9 @@
 ![image](https://github.com/user-attachments/assets/423b1b21-ef0f-4ebc-8c6f-76914119b62a)
 
 
+![image](https://github.com/user-attachments/assets/e09d9c9e-f334-4dd9-93d1-ae9cce712d5b)
+
+
 # 内部计划
 目前放出的版本会带有upx特征，但是内部已去upx特征：
 <img width="992" height="219" alt="image" src="https://github.com/user-attachments/assets/2ff3ac98-0ecf-42e9-8650-8b7698057c7d" />
