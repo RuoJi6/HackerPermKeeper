@@ -47,3 +47,6 @@
 | hackerschoice |
 | shadow1ng     |
 | chainreactors |
+
+
+## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
