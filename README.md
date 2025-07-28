@@ -32,7 +32,7 @@
 <img width="1656" height="932" alt="image" src="https://github.com/user-attachments/assets/adb5e452-d563-41e6-b873-1bf99ee20945" />
 
 ## 加入内部：
- - 提交edr/dv进程名以及伪装
+ - 提交edr/dv进程名以及文件位置
  - 提交Linux权限维持技巧
  - 提供edr/av测试环境
  - 提交重大bug
