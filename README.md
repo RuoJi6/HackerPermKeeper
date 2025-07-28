@@ -52,4 +52,10 @@
 | chainreactors |
 
 
+
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
+
+
+# 交流群
+![image](https://github.com/user-attachments/assets/4cf408f2-596b-447f-bd2e-1f821c5e297b)
+
