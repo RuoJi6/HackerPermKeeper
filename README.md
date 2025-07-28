@@ -14,6 +14,9 @@
 <br/>
 <br/>
 
+
+[中文手册](https://github.com/RuoJi6/CACM/wiki/CACM-%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B) ｜ [English manual](https://github.com/RuoJi6/CACM/wiki/CACM-Tool-Usage-Guide)
+
 # 项目介绍
 一款Linux权限维持+后渗透的插件，功能：端口扫描，敏感信息，指纹识别，IP伪装，键盘监控，进程隐藏，内容搜索，文件搜索，下载工具，edr/av识别，权限维持，ssh连接伪装等多个功能。
 
