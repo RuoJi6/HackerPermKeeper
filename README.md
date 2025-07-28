@@ -14,7 +14,16 @@
 <br/>
 <br/>
 
-# 项目重构！！！
-内测联系作者
+# 项目介绍
+一款Linux权限维持+后渗透的插件，功能：端口扫描，敏感信息，指纹识别，IP伪装，键盘监控，进程隐藏，内容搜索，文件搜索，下载工具，edr/av识别，权限维持，ssh连接伪装等多个功能。
 
-新版本从实战的角度出发，从溯源应急角度出发，完美贴近实战，打造一款实用性高的工具。
+<img width="849" height="283" alt="image" src="https://github.com/user-attachments/assets/155d3bff-e9bd-4c8f-8cc0-8f4d0fce00a1" />
+<img width="1320" height="421" alt="image" src="https://github.com/user-attachments/assets/4ba34a96-b27a-4778-9184-ca8691b77d6b" />
+<img width="1136" height="157" alt="image" src="https://github.com/user-attachments/assets/428f6191-17cc-41ec-a1d8-032f8d1439c8" />
+
+
+![image](https://github.com/user-attachments/assets/dede9aac-dfb6-4a9e-8e13-4a30e38953cd)
+
+![image](https://github.com/user-attachments/assets/423b1b21-ef0f-4ebc-8c6f-76914119b62a)
+
+
