@@ -50,6 +50,13 @@
 | shadow1ng     |
 | chainreactors |
 
+# 赞助
+感谢下面师傅的赞助！！！！！！
+| 赞助者名单：  |
+| ------------- |
+| Rebel |
+
+
 
 
 ## :star2:Stargazers over time [![Stargazers over time](https://starchart.cc/RuoJi6/HackerPermKeeper.svg)](https://starchart.cc/RuoJi6/HackerPermKeeper)
